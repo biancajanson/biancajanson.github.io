@@ -1,0 +1,57 @@
+@import 'variables';
+* {
+    box-sizing: border-box;
+}
+
+.sidenav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $background-color;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $color2;
+    display: block;
+    font-family: $font-family;
+}
+
+.sidenav a:hover {
+    color: $color1;
+}
+
+.sidefoto {
+    border-radius: 60px; 
+    margin-left: 30px;
+    height: 120px;
+}
+
+.sideinfo {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .sideinfo: {
+        font-size: 1px;
+    }
+
+    .sidenav {
+        padding-top: 15px;
+        width: 60px;
+    }
+
+    .sidenav a {
+        font-size: 10px;
+    }
+}
+

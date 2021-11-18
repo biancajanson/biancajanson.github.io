@@ -1,0 +1,366 @@
+@import 'variables';
+
+/* ALGEMEEN */ 
+* {
+    background-color: $background-color;
+}
+
+h1, h2, h3, h4, p, span {
+    font-family: $font-family; 
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    color: $color1;
+    text-align:center;
+}
+
+h2 {
+    color: $color2;
+}
+
+h3, h4 {
+    color: $text-color;
+}
+
+p, span {
+    color: $text-color;
+    text-align:center;
+    font-size: 20px;
+}
+/* END OF ALGEMEEN */  
+
+/* INDEX */
+
+.index {
+    color: $color2;
+    text-align:center;
+}
+
+.index2 {
+    color: $text-color;
+    text-align:center;
+}
+
+.content {
+    display:block;
+    position:relative;
+    height: 300px;
+    margin-left: 20%;
+}
+
+.indexfoto {
+    border-radius: 70px;
+    width: 100%;
+    height: 90%;
+} 
+
+.info {
+    font-size: 15px;
+    span {
+        font-size: 15px;
+    }
+}
+/* END OF INDEX */
+
+/* ABOUT ME */
+.aboutme {
+    display:flex;
+    justify-content: space-around;
+    top: 250px;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.tekst {
+    width: 40%;
+}
+
+.profielfoto {
+    width: 350px;
+    border-radius: 50px;
+    align-items:flex-end;
+    display:block;
+    position: relative;
+}
+
+/* END OF ABOUT ME */
+
+/* SKILLS */
+.skills {
+    text-align: left;
+    margin-left: 20%;
+}
+
+h3 > p {
+    text-align: left;
+}
+/* END OF SKILLS */ 
+
+/* WERKVERLEDEN */
+.werkverleden {
+    margin-left: 20%;
+}
+
+div > p {
+    text-align: left;
+}
+/* END OF WERKVERLEDEN */ 
+
+/* PROJECTEN */ 
+.projecten {
+    margin-left: 20%;
+}
+
+h2 ~ p {
+    text-align: left;
+}
+
+.container {
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 350px;
+    width: 350px;
+    margin: auto;
+    background-color:white;;
+    bottom: 50px;
+}
+
+.cirkel {
+    display: block;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(223, 62, 201);
+    border-radius: 50%;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform:rotate(45deg);
+    }
+    20% {
+        transform:rotate(0deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 0px;
+    }
+    30% {
+        transform:rotate(90deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    40% {
+        transform:rotate(45deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    50% {
+        transform: rotate(0deg);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    60% {
+        transform:rotate(45deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    70% {
+        transform:rotate(90deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    80% {
+        transform:rotate(0deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 0px;
+    }
+    90% {
+        transform:rotate(45deg);
+    }
+    100% {
+        transform:rotate(0deg);
+    }    
+}
+/* END OF PROJECTEN */ 
+
+/* CONTACT */ 
+form {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: $color1;
+    padding: 15px;
+    width: 70%;
+    font-family: $font-family;
+    font-size: small;
+    margin-left: 20%;
+}
+
+label {
+    float: left;
+    width: 250px;
+    text-align: left;
+    margin-right: 15px;
+    color:$text-color;
+}
+
+input {
+    background-color: $color2;
+    font-size: x-small;
+    border: 1px solid;
+    font-family: $font-family;
+    border-color: $color2;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width:250px;
+    height: 100px;
+    background-color: $color2;
+    border: 1px solid $color1;
+    font-family: $font-family;
+    font-size:small;
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: $color2;
+    color: $text-color;
+    left: 100px;
+}
+/* END OF CONTACT */ 
+
+/* MEDIA QUERIES */
+//TELEFOON
+@media (max-width: 480px) {
+    .indexfoto {
+        width:100%;
+        height: 20%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+    p, span {
+        font-size: 10px;
+    }
+
+    .aboutme {
+        width: 100%;
+        height: 600px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .tekst {
+        width: 100%;
+        height: 50%;
+    }
+
+    .profielfoto {
+        width: 250px;
+        height: 350px;
+
+    }
+
+    .container {
+        width: 100px;
+        height: 100px;
+    
+    }
+
+    .cirkel {
+        width: 50%;
+        height: 50%;
+    }
+    form {
+        width: 85%;
+    }
+}
+
+//TABLET
+@media (min-width:480px) and (max-width:768px) {
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    p, span {
+        font-size: 13px;
+    }
+
+    .aboutme {
+        width: 100%;
+        height: 600px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .tekst {
+        width: 100%;
+        height: 50%;
+    }
+
+    .profielfoto {
+        width: 250px;
+        height: 350px;
+        margin-top: 50px;
+    }
+
+    .container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cirkel {
+        width: 50%;
+        height: 50%;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    textarea {
+        width:150px;
+        height: 750px;
+    }
+}
+
+/* END OF MEDIA QUERIES */
